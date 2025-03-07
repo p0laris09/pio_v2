@@ -1,0 +1,33 @@
+<div class="main print_hide">
+{% if page.header %}
+  <header id="header" class="header">
+    {{ page.header }}
+  </header>
+{% endif %}
+
+{% if page.navigation %}
+<div class="nav-ct">
+  <div id="navigation" class="navbar">
+      {{ page.navigation }}
+  </div>
+</div>
+{% endif %}
+
+{% if page.slider %}
+  <div id="slider" class="region-slider">
+    {{ page.slider }}
+  </div>
+{% endif %}
+
+{% if page.content %}
+  <main id="content">
+    {{ page.content }}
+  </main>
+{% endif %}
+
+{% if page.footer %}
+  <footer id="footer">
+    {{ page.footer }}
+  </footer>
+{% endif %}
+</div>

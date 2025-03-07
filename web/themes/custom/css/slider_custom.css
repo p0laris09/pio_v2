@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.first-section {
+    margin-top: -3.5rem;
+}
+
+.region-slider {
+    width: 100vw;  /* Full viewport width */
+    max-width: 100%; /* Prevents overflow */
+    margin: 0 !important;
+    padding: 0 !important;
+    background: none !important;
+    overflow: hidden; /* Prevents unwanted horizontal scrolling */
+}
+
+.region-slider, .slider-container {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Make images inside .field-content fully responsive */
+.field-content img {
+    width: 100%; /* Ensures the image scales with its container */
+    max-width: 100%; /* Prevents it from exceeding its original size */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Removes extra spacing */
+    object-fit: cover; /* Ensures the image fits well within the container */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+    .field-content img {
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .field-content img {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* Ensures the whole image is visible */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .field-content img {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* Ensures proper display on mobile */
+    }
+}

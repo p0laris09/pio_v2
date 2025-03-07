@@ -1,0 +1,183 @@
+/* Events section */
+.latest-events-title {
+    display: block !important;
+    visibility: visible !important;
+    color: #fff; /* or adjust color */
+    font-size: 2rem;
+    text-align: center;
+}
+
+.views-view-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the cards horizontally */
+    align-items: center; /* Centers the cards vertically (if needed) */
+}
+
+.views-view-grid__item-inner {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: rgba(0, 0, 128, 0.9); /* Slight transparency */
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    position: relative;
+    z-index: 2; /* Ensures cards stay above overlay */
+    margin-bottom: 20px;
+    width: 100%; /* Make it take full width */
+    max-width: 500px; /* Set a max width */
+    height: auto; 
+}
+
+
+/* Event Content - 8 columns (Now on the Left) */
+.views-field-title-1,
+.views-field-body,
+.views-field-view-node {
+    flex: 0 0 75%; /* Equivalent to col-8 */
+    max-width: 75%;
+    order: 1; /* Puts content first */
+}
+
+/* Event Date - 4 columns (Now on the Right) */
+.views-field-field-event-date {
+    flex: 0 0 25%; /* Keeps 4-column width */
+    max-width: 25%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    order: 1; /* Ensures it's on the right */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Style the large date number */
+.event-day {
+    font-size: 50px; /* Big number */
+    font-weight: bold;
+    color: #FFD700; /* Gold */
+    line-height: 1;
+}
+
+/* Style the month & year */
+.event-month-year {
+    font-size: 16px;
+    color: white; /* White text */
+    margin-top: -5px;
+}
+
+
+/* Event Title */
+.views-field-title-1 a {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid #FFD700; /* Gold underline */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.views-field-title-1 a:hover {
+    color: #FFD700;
+}
+
+/* Event Description */
+.views-field-body {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #e0e0e0;
+    text-align: justify;
+}
+
+/* Read More Button */
+.views-field-view-node a {
+    display: flex;
+    justify-content: flex-end;
+    color: #FFD700;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.views-field-view-node a::after {
+    content: " →";
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+/* Hide Image */
+.views-field-field-event-image {
+    display: none !important;
+}
+
+.views-field-body .field-content {
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Adjust lines as needed */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 200px; /* Adjust height */
+}
+
+
+.second-section .card-title {
+    padding: 5px 0px;
+    border-bottom: 3px solid var(--secondary-color);
+    text-align: justify;
+}
+
+.underline {
+    display: inline-block;
+    position: relative;
+    font-size: 24px;
+    color: white !important;
+    z-index: 10;
+    margin: 5rem; /* Adjust space below */
+}
+
+
+.underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 4px;
+    background-color: yellow !important; 
+    opacity: 1 !important; 
+    z-index: 10; 
+}
+.see-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: yellow;
+    text-decoration: none;
+    border: 2px solid yellow;
+    border-radius: 15px;
+    background: transparent;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    position: relative;
+    z-index: 9999;
+    max-width: 200px;
+    margin-bottom: 20px; 
+    margin-top: 30px;
+}
+
+
+.see-more-btn span {
+    margin-left: 8px;
+    font-size: 16px;
+}
+
+.see-more-btn:hover {
+    background: yellow;
+    color: black;
+}

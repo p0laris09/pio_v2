@@ -1,0 +1,16 @@
+name: Piotheme
+type: theme
+description: "A custom theme based on Olivero for Drupal 10."
+core_version_requirement: ^10
+base theme: olivero
+
+libraries:
+  - piotheme/global-styling
+
+
+regions:
+  header: "Header"
+  navigation: "Navigation"
+  slider: "Slider"
+  content: "Content"
+  footer: "Footer"

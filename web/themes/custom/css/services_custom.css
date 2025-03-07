@@ -1,0 +1,75 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Apply Poppins font to the services page */
+.services-banner, 
+.service-offer-banner, 
+.service-offer-banner .service-offer, 
+.service-offer-banner .service-offer .service-offer-info, 
+.service-offer-banner .service-offer .service-offer-info h5, 
+.service-offer-banner .service-offer .service-offer-info p 
+.service-offer-banner .service-offer .service-offer-info li {
+  font-family: 'Poppins', sans-serif;
+  text-align: left; /* Adjust text alignment */
+}
+
+/* Adjust spacing to make elements close together */
+.services-banner .services-info h5 {
+  font-size: 45px;
+  border-left: 5px solid var(--primary-color);
+  padding-left: 10px;
+  margin-bottom: 10px; /* Adjust margin */
+  line-height: 1.2; /* Adjust line height */
+}
+
+/* Service Offer Banner */
+.service-offer-banner {
+  background-color: var(--secondSectionBg);
+}
+
+.service-offer-banner .h5 {
+  border-bottom: 4px solid var(--primary-color);
+  display: inline-block;
+  width: 177px;
+  font-size: 26px;
+  padding: 8px 0;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin-bottom: 10px; /* Adjust margin */
+  line-height: 1.2; /* Adjust line height */
+}
+
+.service-offer-banner .service-offer-img {
+  z-index: 2;
+}
+
+.service-offer-banner .service-offer-img img {
+  z-index: 2;
+  width: 100%;
+}
+
+.service-offer-banner .service-offer {
+  z-index: 2;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.service-offer-banner .service-offer .service-offer-info {
+  z-index: 2;
+}
+
+.service-offer-banner .service-offer .service-offer-info h5 {
+  color: var(--primary-color);
+  margin-bottom: 5px; /* Adjust margin */
+  line-height: 1.2; /* Adjust line height */
+}
+
+.service-offer-banner .service-offer .service-offer-info p {
+  width: 80%;
+  margin-bottom: 1px; /* Adjust margin */
+  line-height: 1.2; /* Adjust line height */
+}

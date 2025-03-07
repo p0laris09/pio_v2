@@ -1,0 +1,144 @@
+.nav-ct {
+    display: block;
+    text-align: center;
+    margin-bottom: -3.5rem;
+}
+.navbar {
+    all: unset; /* Resets Bootstrap navbar */
+}
+
+.nav-ct .menu {
+    z-index: 2;
+    background-color: var(--secondary-color) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-family: var(--link-fonts) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    padding: 20px 0 !important;
+    width: 100%;
+    max-width: 1400px; /* Adjust if needed */
+    height: auto; /* Adjust height */
+    margin: 0 auto;
+    background-color: yellow !important;
+}
+.nav-ct .menu__item {
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px !important; /* Adjust spacing */
+    padding: 0 !important;
+}
+
+.nav-ct .menu__link {
+    color: rgba(0, 0, 0, 0.67) !important;
+    padding: 1rem !important;
+    font-size: 15px !important;
+    text-decoration: none !important;
+    transition: 0.2s ease !important;
+}
+
+.nav-ct .menu__link:hover,
+.nav-ct .menu__link:focus,
+.nav-ct .menu__link.is-active {
+    color: var(--primary-color) !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    border-bottom: 5px solid var(--primary-color) !important;
+}
+
+/* Dropdown menu */
+.menu__item--has-children {
+    position: relative; /* Important for dropdown positioning */
+    display: block; /* Block to align items vertically */
+}
+
+
+/* Ensure the submenu is hidden by default */
+.menu--level-2 {
+    visibility: hidden; /* Hidden by default */
+    opacity: 0; /* Transparent */
+    position: absolute; /* Position dropdown under parent */
+    left: 0;
+    top: 100%; /* Place submenu directly below parent */
+    background-color: yellow; 
+    padding: 10px;
+    width: 10rem; /* Allow dynamic width based on content */
+    min-height: auto; /* Allow height to adjust based on content */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    text-align: left; /* Align text to left */
+    display: flex; /* Use flex to display vertically */
+    flex-direction: column; /* Vertical layout */
+    gap: 10px; /* Add spacing between items */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 9999 !important; 
+    overflow: hidden; /* Ensure content fits neatly */
+}
+
+/* Show submenu when active */
+.menu__item--has-children.active > .menu--level-2 {
+    visibility: visible;
+    opacity: 1; /* Fade in */
+    display: flex; /* Ensure it appears in column layout */
+    width: auto; /* Automatically adjust width based on content */
+    min-height: auto; /* Allow height to adjust based on content */
+}
+
+.menu--level-2 .menu__item {
+    padding: 8px 15px;
+    text-align: left;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.menu--level-2 .menu__link {
+    display: block;
+    color: black !important; 
+    text-decoration: none;
+}
+
+/* Style the small arrow indicator */
+.menu__item--has-children > a::after {
+    content: " ▼"; /* Dropdown indicator */
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+@media only screen and (max-width: 992px) {
+    .nav-ct .menu {
+        flex-direction: column !important;
+        align-items: center !important;
+        background-color: white !important; /* Change to match your theme */
+    }
+
+    .menu__item {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .menu__item--has-children {
+        position: relative;
+    }
+
+    .menu--level-2 {
+        display: none;
+        position: absolute;
+        background-color: white; /* Adjust to match theme */
+        width: 100%;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .menu__item--has-children.active .menu--level-2 {
+        display: block;
+    }
+
+    /* Ensure dropdown arrow is visible */
+    .menu__item--has-children > a::after {
+        content: " ▼";
+        font-size: 12px;
+        margin-left: 5px;
+    }
+}

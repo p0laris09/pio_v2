@@ -1,0 +1,17 @@
+.title-banner {
+    padding: 50px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.title-banner .title-info {
+    text-align: center;
+}
+
+.title-banner h5 {
+    font-size: 45px;
+    border-left: 5px solid var(--primary-color);
+    padding-left: 10px;
+    text-align: left; /* Ensure text is aligned to the left */
+    margin-top: 20px;
+}
